@@ -1,0 +1,157 @@
+﻿
+
+body-detail {
+    font-size: 14.5px;
+    font-family: Arial;
+}
+ .body-detail .wap-booking article.affix {
+    top: 80px;
+    position: fixed;
+}
+.body-detail article {
+    position: relative;
+    min-height: 200px;
+    background: #fff;
+    box-shadow: 0 1px 6px #dcdcdc;
+    margin-bottom: 10px;
+    overflow: hidden;
+    clear: both;
+}
+.body-detail article .menufixed {
+    top: 80px;
+    background: #fff;
+    z-index: 100;
+    min-height: 50px;
+    overflow: hidden;
+    float: left;
+    width: 75%;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.body-detail article .content {
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    float: left;
+    line-height: 22px;
+    text-align: justify;
+}
+.body-detail article .menufixed ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.body-detail article .menufixed ul li {
+    float: left;
+}
+.body-detail article .menufixed ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: block;
+    text-align: center;
+}.body-detail article .menufixed ul li:hover a {
+    color: #ff6a00;
+    border-bottom:2px solid #d02028;
+    
+}
+
+ .body-detail article .menufixed ul li a:hover {
+    background-color: rgba(0,0,0,.1);
+}
+
+@media (min-width: 768px){
+      .col-md-9{
+      width:75%;
+  }
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+}
+}
+@media (min-width: 1200px) {
+    .body-detail .wap-booking article {
+        max-width: 308px;
+    }
+}
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.body-detail .wap-booking article h2 {
+    font-size: 16px;
+    margin: 6px 0 5px;
+    padding: 10px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+    color: #000;
+}
+.body-detail article h2 {
+    margin: 0;
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d02028;
+}
+.body-detail .wap-booking article .form-group {
+    padding: 5px 6px;
+    text-align: center;
+}
+.body-detail .wap-booking article .form-group p {
+    color: gray;
+    font-size: 13px;
+    margin: 0 0 6px 0;
+}
+.body-detail .wap-booking article .form-group .text-center {
+    color: #d02028;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+.body-detail .wap-booking article .form-group #btn-booking {
+    background: #d02028;
+    border-radius: 20px;
+    font-family: Arial;
+    border-color: #d02028;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    display: block;
+    margin: 15px 0;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+}
+.body-detail .wap-booking article .form-group .booking-call {
+    color: #888787;
+    margin: 10px 0;
+    font-size: 13px;
+}
+.phone-number {
+    color: #d02028;
+    font-weight: 700;
+    font-size: 18px;
+}
+.body-detail .modal .modal-content .modal-header {
+    padding: 8px 15px;
+    background: #d02028;
+    text-align: center;
+}
+.body-detail .modal .modal-content .modal-header .modal-title {
+    font-family: Roboto-medium;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 18px;
+    text-transform: uppercase;
+    position: relative;
+    top: 4px;
+}
+.body-detail .wap-booking article .form-group #txtErMessage {
+    color: #d02028;
+}
+.body-detail .modal .modal-content .modal-body p{
+    text-align:center;
+}

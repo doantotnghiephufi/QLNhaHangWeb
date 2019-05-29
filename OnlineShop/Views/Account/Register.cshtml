@@ -1,0 +1,125 @@
+﻿@model OnlineShop.Models.KhachHangModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="wapcontent">
+        <div class="wap-account">
+            <div class="wap-account">
+                @if (ViewBag.Success != null)
+                {
+                    <input id="hdUrlReferrer" name="hdUrlReferrer" value="@ViewBag.URL" type="hidden" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="breadcrumb" itemscope="" itemtype="">
+                                <li itemprop="itemListElement" itemscope="" itemtype="">
+                                    <a itemprop="item" href="/trang-chu"> <span itemprop="name">Trang chủ</span></a> <span>&gt;</span>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                                <li itemprop="itemListElement" itemscope="" itemtype="">
+                                    <span itemprop="name"> Thành công</span>
+                                    <meta itemprop="position" content="2">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Tài khoản của bạn đã được tạo!</h1>
+                            <p>Xin chúc mừng! tài khoản của bạn đã được tạo thành công!</p>
+                            <p>Bạn có thể hưởng lợi ích từ việc thành thành viên khi mua sắm với gian hàng chúng tôi.</p>
+                            <p>Nếu bạn có bất kì câu hỏi về hoạt động của gian hàng, vui lòng gửi email đến ban quản lý.</p>
+                            <p>Thư xác nhận đã gửi đến địa chỉ email mà bạn cung cấp. Nếu bạn không nhận được thư trong vòng 1 giờ tới, vui lòng <a href="#">liên hệ chúng tôi</a>.</p>
+                            <p>Vui lòng xác nhận email để kích hoạt tài khoản.</p>
+                            <div class="buttons">
+                                <div class="pull-right"><a class="btn btn-primary" onclick="Continue()">Ok</a></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a itemprop="item" href="/trang-chu"> <span itemprop="name">Trang chủ</span></a> <span>&gt;</span>
+                                    <meta itemprop="position" content="1">
+                                </li>
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <span itemprop="name"> Đăng ký</span>
+                                    <meta itemprop="position" content="2">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <h1>ĐĂNG KÝ THÀNH VIÊN MÓN VIỆT HOÀN TOÀN MIỄN PHÍ!</h1>
+                            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-group" }))
+                            {
+
+                                <input id="hdUrlReferrer" name="hdUrlReferrer" value="@ViewBag.URL" type="hidden" />
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true,"",new {@class="text-danger" })
+                                @Html.ValidationMessageFor(model => model.TenKH, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        @Html.EditorFor(model => model.TenKH, new { htmlAttributes = new { @class = "form-control", @placeholder = "Họ và Tên *",@focus ="focus"} })
+                                    </span>
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        @Html.EditorFor(model=>model.Email,"", new { htmlAttributes = new { @class = "form-control", @placeholder = "Email *" } })
+                                    </span>
+                                </div>
+                                @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control", @placeholder = "Số điện thoại *" } })
+                                    </span>
+                                </div>
+                                @Html.ValidationMessageFor(model => model.DiaChiKH, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        @Html.EditorFor(model => model.DiaChiKH, new { htmlAttributes = new { @class = "form-control", @placeholder = "Địa chỉ" } })
+                                    </span>
+                                </div>
+                                @Html.ValidationMessageFor(model => model.CMND, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        @Html.EditorFor(model => model.CMND, new { htmlAttributes = new { @class = "form-control", @placeholder = "Chứng minh nhân dân" } })
+                                    </span>
+                                </div>
+                                @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        @Html.EditorFor(model => model.PassWord, new { htmlAttributes = new { @class = "form-control", @placeholder = "Mật khẩu *", @type = "password" } })
+                                    </span>
+                                </div>
+                                @Html.ValidationMessageFor(model => model.ConfirmPassWord, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        @Html.EditorFor(model => model.ConfirmPassWord, new { htmlAttributes = new { @class = "form-control", @placeholder = "Xác nhận mật khẩu *", @type = "password" } })
+                                    </span>
+                                </div>
+                                <input type="submit" value="Đăng ký" class="btn btn-register" />
+                                <div class="dangky"></div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    @{Html.RenderPartial("~/Views/Shared/_Huongdan.cshtml");}
+</div>
+
+@section scripts{
+    
+<script src="~/Scripts/JS/Account/Register.js"></script>
+}

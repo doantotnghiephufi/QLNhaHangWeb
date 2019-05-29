@@ -1,0 +1,66 @@
+﻿@model Models.EF.KhachHang
+@{
+    ViewBag.Title = "DetailUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="wapper-content">
+    <div class="container">
+        <div class="wapper wap-deteilaccount">
+            <div class="wapcontent">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb" itemscope="" itemtype="">
+                            <li itemprop="itemListElement" itemscope="" itemtype="">
+                                <a itemprop="item" href="/trang-chu"> <span itemprop="name">Trang chủ</span></a> <span>&gt;</span>
+                                <meta itemprop="position" content="1">
+                            </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="">
+                                <span itemprop="name">Thông tin tài khoản</span>
+                                <meta itemprop="position" content="2">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                @using(Html.BeginForm("DetailUser","User", FormMethod.Post, new { @class = "form-group" ,@id="frmDetailUser"}))
+                {
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ul>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-4 category-profile">
+                                            <img src="~/Content/Images/no_avatar.png" id="img-avatar-profile" class="img-circle img-responsive" alt="@Model.TenKH">
+                                            <span class="file-input btnSelect btn-file">
+                                                <label>
+                                                    <input type="file" name="file" id="file" onchange="imgchange(event)"> chọn ảnh
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="text-manage"><span>ID : </span>@Model.MaKH</div>
+                                            <div class="text-manage"><span>DT : </span>@Model.SDT</div>
+                                            <button onclick="cancelImage();" type="button" id="btn-delete" style="opacity: 0;">Xóa</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="/thong-tin-tai-khoan">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        Thông tin tài khoản
+                                        <span class="pasgo-icondesktop-menublack"></span>
+                                    </a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-8"></div>
+                    </div>
+                }
+            </div>
+        </div>
+        @{Html.RenderPartial("~/Views/Shared/_Huongdan.cshtml");}
+    </div>
+    
+</div>

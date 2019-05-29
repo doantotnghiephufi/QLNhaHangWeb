@@ -1,0 +1,53 @@
+﻿@model List<Models.EF.MonAn>
+<div class="container">
+    <div class="row">
+        <div class="readmore width100">
+            <div class="btn-more red"></div>
+            <div class="btn-more-click red-click title-detail">
+                <h1>
+                    <aa clsbbanss="title"> MÓN NGON </aa> <bb clsbbanss="nsbbanme">HẰNG NGÀY</bb>
+                </h1>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 bg-cate">
+            @{
+                foreach (Models.EF.MonAn item in Model)
+                {
+                    <div class="col-lg-4 col-sm-4">
+                        @*<div class="media-left col-md-4 col-xs-12">
+                            <a href="http://barona.vn/mon-an/xot-gia-vi-canh-chua/187" target="_blank">
+                                <h5><img src="/Category/RetrieveImage/@item.MaMonAn" class="img-circle img-responsive vector img-center" alt=""></h5>
+                            </a>
+                        </div>
+                        <div class="col-md-8 media-body-cate">
+                            <h4 class="media-heading"><a href="http://barona.vn/mon-an/xot-gia-vi-canh-chua/187">@item.TenMonAn</a></h4>
+                            <div></div>
+                        </div>*@
+                        <div class="items">
+                            <div class="entry-image">
+                                <div class="image">
+
+                                    <a href="/menu-alacate/mon-truyen-thong/mon-lau.html">
+                                        <img src="/Category/RetrieveImage/@item.MaMonAn" alt="">
+                                    </a>
+                                </div>
+                                <div class="thumbnail_decor">
+                                    <div class="thumbnail_decor_in"><a href="/menu-alacate/mon-truyen-thong/mon-lau.html"></a></div>
+                                </div>
+                            </div>
+                            <div class="box-services">
+                                <div class="name">@item.TenMonAn</div>
+                                <div class="info">
+                                    <p><strong>Lẩu Nấm Nam Bộ&nbsp;( Đặc biệt )</strong><br>Nấm Hải Sản<br>Riêu Cua Hải Sản</p>
+                                </div>
+                                <div class="readmore"><a href="/menu-alacate/mon-truyen-thong/mon-lau.html">Xem chi tiết</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                }
+            }
+            
+        </div>
+    </div>
+</div>

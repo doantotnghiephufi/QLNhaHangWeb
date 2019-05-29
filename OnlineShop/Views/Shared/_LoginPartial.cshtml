@@ -1,0 +1,24 @@
+﻿<link href="~/Assets/Login/css/login-register.css" rel="stylesheet" />
+<script src="~/Assets/Login/js/login-register.js"></script>
+@using Microsoft.AspNet.Identity
+@if (Session[OnlineShop.Common.CommonConstants._USER_SESSION] !=null)
+{
+    
+    OnlineShop.Common.SessionUserBO sessionuser = (OnlineShop.Common.SessionUserBO)Session[OnlineShop.Common.CommonConstants._USER_SESSION];
+    
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Hello " +sessionuser.Name + "!", "DetailUser", "User", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li><a href="/LogOut">Thoát</a>
+    </ul>
+
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right" >
+        <li><a  data-toggle="modal" href="/dang-ky" >Đăng ký</a></li>
+        <li><a  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Đăng nhập</a></li>
+    </ul>
+}
+

@@ -1,0 +1,97 @@
+﻿@model Models.EF.MonAn
+
+@{
+    ViewBag.Title = "Thêm mới món ăn";
+    Layout = "~/Areas/Admin/Views/Shared/_Layouts.cshtml";
+}
+@section header {
+    Thêm mới món ăn
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Danh sách combo món ăn
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                       @using (Html.BeginForm())
+                       {
+                        @Html.AntiForgeryToken()
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TenMonAn, htmlAttributes: new { @class = "control-label col-md-4" })
+                                
+                                    @Html.EditorFor(model => model.TenMonAn, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.TenMonAn, "", new { @class = "text-danger" })
+                                
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.DonViTinh, htmlAttributes: new { @class = "control-label col-md-4" })
+                                
+                                    @Html.EditorFor(model => model.DonViTinh, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.DonViTinh, "", new { @class = "text-danger" })
+                                
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SoLuongTon, htmlAttributes: new { @class = "control-label col-md-4" })
+                                
+                                    @Html.EditorFor(model => model.SoLuongTon, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.SoLuongTon, "", new { @class = "text-danger" })
+                               
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TrangThai, htmlAttributes: new { @class = "control-label col-md-4" })
+                                
+                                    @Html.EditorFor(model => model.TrangThai, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.TrangThai, "", new { @class = "text-danger" })
+                                
+                            </div>
+                            <div class="form-group row" style="margin-left:5px !important">
+                                <img id="HinhAnh" style="width:150px;height:150px" /><label id="txtTenHinh"></label>
+                                <input type="file" id="fileUpload" name="fileUpload" style="display:none" accept=".png,.jpg"/>
+                                <input type="button" id="btnUpload" value="Chọn hình ảnh" class="btn btn-success" />
+                                @Html.ValidationMessageFor(model => model.HinhAnh, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                
+                                    <div class="listBox">
+                                        <select class="form-control"data-change="require" autocomplete="off" name="cboLoaiMonAn" id="cboLoaiMonAn" style="width:100%;">
+                                            <option value="-1">-- Chọn Loại Món Ăn --</option>
+                                            @Html.Raw(ViewBag.ComboFoodType)
+                                        </select>
+                                    </div>
+                            </div>
+
+                            
+                       }
+                        <div class="form-group">
+                            <div class="col-md-offset-0 col-md-10">
+                                <input type="button" value="Thêm mới" id="btnAdd" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-6 (nested) -->
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section scripts{
+    @System.Web.Optimization.Scripts.Render("~/bundles/jqueryval");
+    
+<script src="~/Scripts/JS/Food/CreateFood.js"></script>
+}

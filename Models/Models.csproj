@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4C2AD80-6622-473B-A5BF-8B932BC2A6D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Models</RootNamespace>
+    <AssemblyName>Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\KhuVucDAO.cs" />
+    <Compile Include="DAO\LoaiMonAnDAO.cs" />
+    <Compile Include="DAO\MonAnDAO.cs" />
+    <Compile Include="DAO\PhieuDatBanDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DAO\ViTriDAO.cs" />
+    <Compile Include="EF\CaLam.cs" />
+    <Compile Include="EF\ChiTietComBo.cs" />
+    <Compile Include="EF\ChiTietComBoTU.cs" />
+    <Compile Include="EF\ChiTietDatComBo.cs" />
+    <Compile Include="EF\ChiTietDatMonAn.cs" />
+    <Compile Include="EF\ChiTietDatThucUong.cs" />
+    <Compile Include="EF\ChiTietDDNL.cs" />
+    <Compile Include="EF\ChiTietHDComBo.cs" />
+    <Compile Include="EF\ChiTietMonAn.cs" />
+    <Compile Include="EF\ChiTietPhieuNhapNL.cs" />
+    <Compile Include="EF\ChiTietThucUong.cs" />
+    <Compile Include="EF\ComBo.cs" />
+    <Compile Include="EF\DonDatNL.cs" />
+    <Compile Include="EF\HoaDon.cs" />
+    <Compile Include="EF\KhachHang.cs" />
+    <Compile Include="EF\KhuVuc.cs" />
+    <Compile Include="EF\KhuyenMaiKH.cs" />
+    <Compile Include="EF\KMGiamGiaHD.cs" />
+    <Compile Include="EF\LoaiKhuVuc.cs" />
+    <Compile Include="EF\LoaiMonAn.cs" />
+    <Compile Include="EF\LoaiNguyenLieu.cs" />
+    <Compile Include="EF\LoaiNhanVien.cs" />
+    <Compile Include="EF\LoaiThucUong.cs" />
+    <Compile Include="EF\MonAn.cs" />
+    <Compile Include="EF\NguyenLieu.cs" />
+    <Compile Include="EF\NhaCungCap.cs" />
+    <Compile Include="EF\NhaHangDbContext.cs" />
+    <Compile Include="EF\NhanVien.cs" />
+    <Compile Include="EF\PhieuDatBan.cs" />
+    <Compile Include="EF\PhieuNhapNL.cs" />
+    <Compile Include="EF\PhuThuViTri.cs" />
+    <Compile Include="EF\PhuTrach.cs" />
+    <Compile Include="EF\ThanhPhanMonAn.cs" />
+    <Compile Include="EF\ThanhPhanThucUong.cs" />
+    <Compile Include="EF\ThongTinDKCa.cs" />
+    <Compile Include="EF\ThucUong.cs" />
+    <Compile Include="EF\ViTri.cs" />
+    <Compile Include="Migrations\201905191521532_AddEmail.cs" />
+    <Compile Include="Migrations\201905191521532_AddEmail.Designer.cs">
+      <DependentUpon>201905191521532_AddEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905211556531_AddActivation.cs" />
+    <Compile Include="Migrations\201905211556531_AddActivation.Designer.cs">
+      <DependentUpon>201905211556531_AddActivation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905211743472_AddisValid.cs" />
+    <Compile Include="Migrations\201905211743472_AddisValid.Designer.cs">
+      <DependentUpon>201905211743472_AddisValid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905261514319_AddDatMonTruoc.cs" />
+    <Compile Include="Migrations\201905261514319_AddDatMonTruoc.Designer.cs">
+      <DependentUpon>201905261514319_AddDatMonTruoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201905191521532_AddEmail.resx">
+      <DependentUpon>201905191521532_AddEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905211556531_AddActivation.resx">
+      <DependentUpon>201905211556531_AddActivation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905211743472_AddisValid.resx">
+      <DependentUpon>201905211743472_AddisValid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905261514319_AddDatMonTruoc.resx">
+      <DependentUpon>201905261514319_AddDatMonTruoc.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

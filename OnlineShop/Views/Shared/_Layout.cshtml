@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap -->
+    <link href="~/Content/Images/favicon.ico" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/nivo-slider.css" rel="stylesheet" />
+
+    <link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+    
+    @*<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">*@
+    
+    @if (IsSectionDefined("styles"))
+    {
+        @RenderSection("styles")
+    }
+</head>
+<body>
+    
+    @RenderPage("_Navigation.cshtml") 
+    @RenderBody()
+
+    <footer>
+        <div class="footer">
+            <div class="footer-top"></div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 text-center">
+                            <div id="map-canvas" style="max-width:535px;height:300px;">
+                                <img src="~/Content/Images/googlemap.png" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <ul class="addpress">
+                                        <li><i class="icon"></i> 200 Trần Não, Quận 2, Tp.Hồ Chí Minh</li>
+                                        <li><i class="fa fa-phone"></i> Hotline : 035 7777 788</li>
+                                        <li><i class="fa fa-envelope"></i> rubygardenq2@gmail.com</li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-5">
+                                    <ul class="social">
+                                        <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-google-plus-square"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="hr"></div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <ul class="links">
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-tiec/set-menu.html">Set Menu</a></li>
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-tiec/thuc-don-tiec-tu-chon.html">Thực Đơn Tiệc</a></li>
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-tiec/thuc-uong.html">Thực Đơn Nước Uống</a></li>
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-tiec/khuyen-mai-tiec.html">Khuyến Mãi Tiệc</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ul class="links">
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-alacate/thuc-uong.html">Thức Uống</a></li>
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-alacate/khai-vi.html">Các Món Khai Vị</a></li>
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-alacate/mon-com-trua.html">Các Món Ăn Trưa</a></li>
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-alacate/mon-au.html">Các Món Âu</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4">
+                                    <ul class="links">
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-alacate/hai-san.html">Các Món Hải Sản</a></li>
+                                        <li><i class="fa fa-angle-double-right"></i><a href="menu-alacate/mon-truyen-thong.html">Các Món Truyền Thống</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="footer-copyright"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">Thiết kế website bởi Hufi.vn</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="back-top" style="display:block;"></div>
+
+    <div class="modal fade login" id="loginModal">
+        <div class="modal-dialog login animated">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4> Đăng nhập với</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="box">
+                        <div class="content">
+                            <div class="social">
+                                <a class="circle github" href="#">
+                                    <i class="fa fa-github fa-fw"></i>
+                                </a>
+                                <a id="google_login" class="circle google" href="#">
+                                    <i class="fa fa-google-plus fa-fw"></i>
+                                </a>
+                                <a id="facebook_login" class="circle facebook" href="#">
+                                    <i class="fa fa-facebook fa-fw"></i>
+                                </a>
+                            </div>
+                            <div class="division">
+                                <div class="line l"></div>
+                                <span>or</span>
+                                <div class="line r"></div>
+                            </div>
+                            <div class="error" id="errorBox"></div>
+                            <div class="form loginBox">
+                                @{Html.RenderPartial("~/Views/Account/Login.cshtml");}
+                                    
+                                @*<form method="" action="" accept-charset="UTF-8">
+                                    <input id="txtUserName" class="form-control" type="text" placeholder="Tên tài khoản" name="txtUserName">
+                                    <input id="txtPassWord" class="form-control" type="password" placeholder="Mật khẩu" name="txtPassWord">
+                                    <input class="btn btn-default btn-login" type="button" value="Đăng nhập" onclick="loginAjax()">
+                                </form>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content registerBox" style="display:none;">
+                            <div class="form">
+                                <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                                    <input id="txtUserName" class="form-control" type="text" placeholder="Tên tài khoản" name="txtUserName">
+                                    <input id="txtPassWord" class="form-control" type="password" placeholder="Mật khẩu" name="txtPassWord">
+                                    <input id="password_confirmation" class="form-control" type="password" placeholder="Nhập lại mật khẩu" name="password_confirmation">
+                                    <input class="btn btn-default btn-register" type="button" value="Tạo tài khoản" name="commit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="forgot login-footer">
+                        <span>
+                            Nhập vào
+                            <a href="javascript: showRegisterForm();">Tạo mới tài khoản</a>
+                            ?
+                        </span>
+                    </div>
+                    <div class="forgot register-footer" style="display:none">
+                        <span>Bạn đã có tài khoản chưa?</span>
+                        <a href="javascript: showLoginForm();">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Assets/admin/vendor/jquery/jquery.js"></script>
+    <script src="/Assets/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/common.js"></script>
+    <script src="~/Scripts/jquery.nivo.slider.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    
+    @Scripts.Render("~/bundles/jqueryval")
+  @RenderSection("scripts", required: false)
+</body>
+</html>

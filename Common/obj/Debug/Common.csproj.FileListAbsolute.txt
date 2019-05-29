@@ -1,0 +1,5 @@
+D:\Công nghệ web\Lập trình MVC\OnlineShop\Common\bin\Debug\Common.dll
+D:\Công nghệ web\Lập trình MVC\OnlineShop\Common\bin\Debug\Common.pdb
+D:\Công nghệ web\Lập trình MVC\OnlineShop\Common\obj\Debug\Common.dll
+D:\Công nghệ web\Lập trình MVC\OnlineShop\Common\obj\Debug\Common.pdb
+D:\Công nghệ web\Lập trình MVC\OnlineShop\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

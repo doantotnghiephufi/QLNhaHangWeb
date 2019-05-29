@@ -1,0 +1,19 @@
+﻿@*@model OnlineShop.Models.LoginModel
+
+@using (Ajax.BeginForm("Login", "Account", null,new { @id="frmLogin"}))
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control",@id="txtUserName",@name="txtUserName",@placeholder="Tên tài khoản",@autofocus="autofocus",@type="text" } })
+    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger field-validation-valid" })
+
+
+    @Html.PasswordFor(model => model.PassWord,new {@class="form-control",@id="txtPassWord",@name="txtPassWord",@placeholder="Mật khẩu" })
+    @Html.ValidationMessageFor(model => model.PassWord, "", new { @class = "text-danger field-validation-valid" })
+
+    <input class="btn btn-default btn-login" type="button" value="Đăng nhập" onclick="loginAjax()">
+}*@
+<input id="txtUserName" class="form-control" type="text" placeholder="Tên tài khoản" name="txtUserName">
+<input id="txtPassWord" class="form-control" type="password" placeholder="Mật khẩu" name="txtPassWord">
+
+<input class="btn btn-default btn-login" type="button" value="Đăng nhập" onclick="loginAjax()">

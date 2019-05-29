@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Xác nhận tài khoản";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="wapcontent">
+        <div class="wap-account">
+            <div class="wap-account">
+                <div class="alert alert-warning" id="previous">
+                    <strong>Xác nhận tài khoản</strong>
+                    <input type="submit" class="btn btn-warning" value="Xác nhận" onclick="Verified()" />
+                </div>
+                <div class="alert alert-success" id="after" style="display:none">
+                    <strong><span class="glyphicon glyphicon-ok"></span>Tài khoản của bạn đã được kích hoạt</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    @{Html.RenderPartial("~/Views/Shared/_Huongdan.cshtml");}
+</div>
+<script>
+    function Verified() {
+        $.ajax({
+            type:'post',
+            url: '/aj/Account/RegisterConfirm',
+            data: { 'MaKH':'@ViewBag.MaKH','Activation': '@ViewBag.Activation' },
+            success: function (msg) {
+                $('#previous').hide();
+                $('#after').show();
+                alert(msg);
+            }
+        })
+    }
+</script>

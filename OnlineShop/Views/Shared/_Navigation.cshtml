@@ -1,0 +1,66 @@
+﻿<header id="header">
+    <div class="logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="@System.Configuration.ConfigurationManager.AppSettings["CDNCSS"]imgs/logonhahang1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="phone">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="tel:0357777788" onclick="">
+                        <span id="phone-number">Hotline : 035 99999999</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="menu-index" class="">
+        <nav class="navbar navbar-default">
+            <div class="collapse navbar-collapse" id="bs-menu">
+                <div class="container">
+                    <ul class="nav navbar-nav menu">
+                        <li class="active"><a href="~/Home/Index">Trang Chủ</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="menu-tiec.html">Menu Tiệc</a><ul class="dropdown-menu"><li><a href="menu-tiec/set-menu.html">Set Menu</a></li><li><a href="menu-tiec/thuc-don-tiec-tu-chon.html">Thực Đơn Tiệc Tự Chọn</a></li><li><a href="menu-tiec/thuc-uong.html">Thức Uống</a></li><li><a href="menu-tiec/khuyen-mai-tiec.html">Khuyến Mãi Tiệc</a></li><li><a href="menu-tiec/km-tiec-cuoi-su-kien.html">KM Tiệc Cưới &amp; Sự Kiện</a></li></ul></li>
+                        <li class="dropdown">
+                            <a href="menu-alacate.html">Menu Alacate</a>
+                            <ul class="dropdown-menu" style="display: none;">
+                                <li><a href="menu-alacate/hai-san.html">Hải Sản</a></li>
+                                <li><a href="menu-alacate/mon-truyen-thong.html">Món Truyền Thống</a></li>
+                                <li><a href="menu-alacate/mon-au.html">Món Âu</a></li>
+                                <li><a href="menu-alacate/khai-vi.html">Khai Vị</a></li>
+                                <li><a href="menu-alacate/mon-com-trua.html">Món Cơm Trưa</a></li>
+                                <li><a href="menu-alacate/thuc-uong.html">Thức Uống</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="chia-se.html">Chia Sẻ</a></li>
+                        <li class="dropdown">
+                            <a href="/dat-ban">Đặt tiệc</a>
+                        </li>
+                        <li class="dropdown"><a href="hinh-anh.html">Hình Ảnh</a><ul class="dropdown-menu"><li><a href="hinh-anh/nha-hang-nam-bo.html">Nhà hàng Nam Bộ</a></li><li><a href="hinh-anh/hai-san.html">Hải Sản Tươi Sống</a></li><li><a href="hinh-anh/mon-an.html">Món Ăn</a></li><li><a href="hinh-anh/tiec-va-su-kien.html">Tiệc và Sự kiện</a></li><li><a href="hinh-anh/sinh-nhat.html">Sinh Nhật</a></li></ul></li>
+                        <li><a href="lien-he.html">Liên Hệ</a></li>
+                        <li><a class="hidden" href="hap-dan-trong-tuan.html">Hấp dẫn trong tuần</a></li>
+                    </ul>
+                    @Html.Partial("_LoginPartial");
+                </div>
+            </div>
+        </nav>
+    </section>
+</header>
+<section id="slider-area">
+    <div id="slider" class="nivoSlider">
+        <img src="~/Content/Images/slide/2018-min.jpg" alt="" style="width: 1287px; visibility: hidden;">
+        <img src="~/Content/Images/slide/slide-NB2.jpg" alt="" style="width: 1287px; visibility: hidden;">
+        <img src="~/Content/Images/slide/slide-NB3.jpg" alt="" style="width: 1287px; visibility: hidden;">
+        <img src="~/Content/Images/slide/slide-NB4.jpg" alt="" style="width: 1287px; visibility: hidden;">
+        <img src="~/Content/Images/slide/slide-NB5.jpg" alt="" style="width: 1287px; visibility: hidden;">
+
+        <div class="nivo-caption"></div>
+        <div class="nivo-directionNav"><a class="nivo-prevNav">Prev</a><a class="nivo-nextNav">Next</a></div>
+    </div>
+</section>
+

@@ -1,0 +1,827 @@
+﻿
+.nav-right > li .dropdown-menu {
+    max-height: 530px;
+    /*overflow-y: auto;*/
+}
+
+#tableuserconfig2 {
+    text-align: center;
+}
+
+.loading {
+    z-index: 9999999;
+    position: fixed;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    display: none;
+}
+
+.arragement .cont {
+    height: auto;
+    min-height: 80px;
+    max-height: 250px;
+    font-family: "Roboto Condensed", Arial, sans-serif;
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ddd;
+    border-radius: 2px 0 0 2px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    padding: 2px 0;
+}
+
+.arragement ul {
+    display: block;
+}
+
+    .arragement ul li {
+        padding: 4px 10px;
+        cursor: pointer;
+    }
+
+        .arragement ul li:nth-of-type(even) {
+            background: #f9f9f9;
+        }
+
+        .arragement ul li:hover {
+            background: #ebfaed;
+        }
+
+.arrange-arrows {
+    position: relative;
+    padding: 0px 5px;
+}
+
+    .arrange-arrows > a {
+        display: block;
+        margin: 5px 0;
+        border-radius: 2px;
+        padding: 0 2px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+        .arrange-arrows > a:hover {
+            background-color: #ddd;
+        }
+
+.formElements .innerContent {
+    margin-top: 1%;
+    display: block;
+}
+
+#reportBirthList .listResult {
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+}
+
+    #reportBirthList .listResult + .listResult {
+        border-left: none;
+    }
+
+#reportDeadList .listResult {
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+}
+
+    #reportDeadList .listResult + .listResult {
+        border-left: none;
+    }
+
+
+/*Phân công giáo viên bộ môn*/
+.tb-teachersubject {
+    margin-bottom: 50px;
+}
+
+    .tb-teachersubject tbody tr td:first-child {
+        text-align: center;
+    }
+
+    .tb-teachersubject tbody tr td:last-child {
+        font-size: 13px !important;
+        font-weight: normal !important;
+    }
+
+    .tb-teachersubject tbody tr td:nth-child(2), .tb-teachersubject tbody tr td:nth-child(3) {
+        text-align: left !important;
+    }
+
+#divcboSubject #cboSubject_chosen input {
+    width: 100% !important;
+}
+
+#divcboSubject #cboSubject_chosen {
+    max-width: 450px !important;
+}
+
+a[data-name='aDeleteTeacher'] {
+    cursor: pointer !important;
+}
+
+.clteacherSubject {
+    overflow: inherit !important;
+}
+
+#cboSubject_chosen input[type=text] {
+    height: 26px !important;
+}
+
+.chosen-container#cboSubject_chosen {
+    font-size: 14px !important;
+}
+
+#tbDocumentPupil.table > thead > tr > th, #tbDocumentPupil.table > tbody > tr > th {
+    white-space: normal;
+}
+/*Báo cáo tổng hợp hồ sơ học sinh*/
+table#tbDocumentPupil tbody tr td:last-child, table#tbDocumentPupil tbody tr td:nth-child(2) {
+    font-size: 13px !important;
+    font-weight: normal;
+    text-align: left;
+}
+
+#tbodyDocumentPupil tr td.tdCenter { /*text-align: center;*/
+    text-align: right;
+}
+
+#tbodyDocumentPupil tr td.tdboild {
+    font-weight: bold !important;
+    color: black;
+}
+
+/*Phiếu điểm học sinh*/
+table.tb-transcriptmarkpupil tr td:nth-child(3), table.tb-transcriptmarkpupil tr td:nth-child(5) {
+    text-align: left !important;
+}
+
+.isedit {
+    cursor: pointer !important;
+}
+
+#tbTermSubject thead th {
+    border-bottom: 1px solid #eee !important;
+}
+
+#tbDetailMark tbody tr td {
+    border: none !important;
+}
+
+#tbDetailMark > tbody > tr > td:last-child {
+    font-weight: normal;
+    font-size: 14px !important;
+}
+
+table.tb-transcriptmarkpupil > tbody > tr > td:last-child {
+    font-size: 13px !important;
+}
+
+#tbnomal thead tr th {
+    font-weight: normal !important;
+    border: 1px solid gray !important;
+    padding: 6px 12px;
+    text-align: center !important;
+}
+
+#tbnomal tbody tr td {
+    font-weight: normal !important;
+    border: 1px solid gray !important;
+}
+
+#tbnomalT thead tr th {
+    /*font-weight: normal !important;*/
+    border: 1px solid gray !important;
+    padding: 5px 5px;
+    text-align: center !important;
+    font-size: 13px !important;
+}
+
+#tbnomalT tbody tr td {
+    font-weight: normal !important;
+    border: 1px solid gray !important;
+}
+
+#tbnomalT > .tdbold {
+    font-weight: bold !important;
+}
+
+.tdbold {
+    font-weight: bold !important;
+}
+
+.tdleft {
+    text-align: left !important;
+}
+
+.paddingleft-5px {
+    padding-left: 5px;
+}
+
+.paddingbottom-0px {
+    padding-bottom: 0px !important;
+}
+
+.paddingtop-0px {
+    padding-top: 0px !important;
+}
+
+.tbend thead tr th, .tbend tbody tr td {
+    font-size: 10px !important;
+    padding: 0px 5px !important;
+}
+
+.tbend {
+    width: 100%;
+}
+
+.chosen-container input.default {
+    width: auto !important;
+}
+
+ul.chosen-choices {
+    border-radius: 4px;
+    border: 1px solid #DDD !important;
+}
+
+/*.chosen-container-active .chosen-choices, .chosen-container-active .chosen-single {
+    box-shadow: none !important;
+}*/
+
+.chosen-container .chosen-drop {
+    border: 1px solid #DDD !important;
+}
+
+/*a.chosen-single {
+    border: 1px solid #DDD !important;
+}*/
+
+@media print {
+    @page {
+        size: A3 landscape; /* auto is the initial value */
+        margin: 0mm;
+    }
+
+    body {
+        margin: 1.6cm;
+        margin-left: 7px;
+        width: 100%;
+        font-size: 10px;
+    }
+}
+
+.overflow-n {
+    overflow-x: inherit !important;
+}
+
+.chosen-container-active.chosen-with-dropup .chosen-single {
+    -moz-border-radius-topright: 0 !important;
+    border-top-right-radius: 0 !important;
+    -moz-border-radius-topleft: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+.chosen-dropup {
+    top: auto !important;
+    bottom: 23px;
+    border: solid #aaa;
+    border-width: 1px 1px 0 1px;
+    margin-top: -1px;
+    border-radius: 4px 4px 0px 0px !important;
+}
+
+.divTitleLeft {
+    float: left;
+    font-size: 13px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+
+.divTileRight {
+    float: right;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: 16px;
+}
+
+.thGroup {
+    position: relative;
+    top: 0px;
+    background-color: rgb(230, 230, 230);
+}
+
+.divPrint1 table {
+    border: 1px solid #ddd;
+}
+
+    .divPrint1 table td {
+        border: 1px solid #ddd;
+    }
+
+    .divPrint1 table tbody tr td {
+        border: 1px solid #ddd;
+    }
+
+.divPrint table {
+    border: 1px solid #ddd;
+    display: block;
+}
+
+    .divPrint table td {
+        border: 1px solid #ddd;
+    }
+
+    .divPrint table tbody tr td {
+        border: 1px solid #ddd;
+    }
+
+
+.score-board .nav-tabs > li.active > a {
+    text-transform: none !important;
+}
+
+/*Combo chosen chọn trường ở phần setting*/
+#cboComboSchool_chosen.chosen-container-single .chosen-single {
+    padding: 3px 0 0 15px;
+}
+/*Combo chosen chọn trường ở phần setting trang chủ khi chưa được setting*/
+#cboComboSchoolIndex_chosen.chosen-container-single .chosen-single {
+    padding: 3px 0 0 15px;
+}
+
+    #cboComboSchoolIndex_chosen.chosen-container .chosen-results, #cboComboSchoolIndex_chosen.chosen-container-single .chosen-single span {
+        font-size: 14px;
+    }
+
+.modal-open .ui-multiselect-menu {
+    z-index: 10000 !important;
+}
+
+/*Cho lưới mờ khi menu không bị đè lên*/
+.grid-loader {
+    z-index: 0 !important;
+}
+
+.capcha-login > a > img {
+    height: 38px;
+    width: 100px;
+    border: none;
+    top: 0;
+}
+
+#frmCaptcha .i-refresh {
+    top: 10px;
+}
+
+#tbdContentList input[data-type="checkbox"] {
+    display: initial;
+}
+
+
+
+
+.score-board thead > tr > th.border-bottom-cyan:first-child {
+    border-left: 1px solid #ddd;
+}
+
+#tbodyContentReportMarkQuality tr td:last-child {
+    border-right: 1px solid #ddd;
+}
+
+.padBot20 {
+    padding-bottom: 20px;
+}
+
+/*combox select style in firefox (dau mui ten)*/
+/*.listBox {
+    position: relative;
+    width: 99.1% !important;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    height: 30px;
+    padding: 0;
+    z-index: 0;
+    margin-right: 4px;
+    background-color: #fff;
+}*/
+
+button:focus {
+    outline: 0;
+}
+
+.ui-multiselect:focus {
+    border-color: #66afe9 !important;
+    -moz-box-shadow: 0 0 0.4px 0.4px #66afe9;
+    -webkit-box-shadow: 0 0 0.4px 0.4px #66afe9;
+    box-shadow: 0 0 0.4px 0.4px #66afe9;
+}
+
+.disabledcombo .chosen-disabled {
+    opacity: 1 !important;
+}
+
+input[data-type="datepicker"][readonly] {
+    background-color: #fff;
+}
+/*Quản lý tài khoản*/
+#tblData > tr {
+    cursor: pointer;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    /*#tblAttendance .listBox:before {
+        background: transparent !important;
+    }*/
+
+    #tblAttendance select {
+        text-align: center;
+        text-align-last: center;
+        /* webkit*/
+    }
+
+    #tblAttendance option {
+        text-align: left;
+        /* reset to left*/
+    }
+
+    #tblListPupil select {
+        text-align: center;
+        text-align-last: center;
+        /* webkit*/
+    }
+
+    #tblListPupil option {
+        text-align: left;
+        /* reset to left*/
+    }
+
+    #tbdContentList select {
+        text-align: center;
+        text-align-last: center;
+    }
+}
+
+/*@-moz-document url-prefix() {
+    #tblAttendance .listBox::before {
+        border-radius: 0;
+    }
+}*/
+
+#modalAttendancePeriod textarea {
+    resize: vertical;
+}
+
+#tbImportPupil tbody > tr > td {
+    white-space: nowrap;
+}
+
+.tr-error {
+    background-color: #ddd;
+}
+
+#txtAttendaceDate {
+    background: #fff;
+}
+
+.score-board .td-input input.input-changed {
+    color: #e82706;
+    font-weight: 700;
+}
+
+.input-changed {
+    color: #e82706;
+    font-weight: 700;
+}
+
+.listBox select {
+    cursor: pointer;
+}
+
+.i-xs.i-datetime {
+    cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+    cursor: pointer;
+}
+
+#PaginationManagePupil > li, #PaginationManageEditMarkRequest > li, #PaginationPupil > li, #PaginationMigrationRequest > li {
+    cursor: pointer;
+}
+
+.fivelineBorder tbody > tr:nth-child(5n) > td {
+    border-bottom: 1px solid #333;
+}
+
+#cboTeacher_ms {
+    width: 360px;
+}
+
+/*.score-board .td-input input {
+    vertical-align: -webkit-baseline-middle;
+}*/
+
+/*.score-board .td-input.disabled span {
+    line-height: 29px;
+}*/
+
+.ui-sortable-helper {
+    border: 3px dashed #aaa;
+    height: 45px;
+    width: 344px;
+    background: #ccc;
+}
+
+.ui-sortable-placeholder {
+    border: 3px dashed #aaa;
+    height: 45px;
+    width: 344px;
+    background: #ccc;
+}
+
+.lineBorderTop td {
+    border-top: 1px solid #bbb !important;
+}
+
+.lineBorderTop th {
+    border-top: 1px solid #bbb !important;
+}
+
+.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content {
+    /*max-width:400px;*/
+    right: 0;
+    width: auto !important;
+}
+
+.last-bottom {
+    top: auto !important;
+    bottom: -35px !important;
+}
+
+body.modal-open {
+    overflow: auto;
+    padding-right: 0 !important;
+}
+/*năng lực phẩm chất*/
+.resuggest {
+    font-size: 12px;
+    line-height: 16px;
+    border: 0;
+}
+
+    .resuggest .ui-menu-item {
+        background: none;
+        padding: 4px 5px;
+    }
+
+        .resuggest .ui-menu-item:hover, .resuggest .ui-state-focus {
+            background: none;
+            background-color: #e9f3ff;
+            cursor: pointer;
+            margin: 0;
+            border: 0;
+        }
+
+        .resuggest .ui-menu-item + .ui-menu-item {
+            border-top: 1px solid #e5e5e5;
+        }
+
+    .resuggest.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content {
+        max-width: 306px;
+    }
+
+    .resuggest .ui-state-focus.h-suggest {
+        background: none;
+        background-color: #e5e5e5;
+        border: 0;
+        margin: 0;
+        border-bottom: 1px solid #a2cbff;
+        padding: 4px 7px;
+    }
+
+.isdelete {
+    cursor: pointer !important;
+}
+
+/*css tạm thời cho form điểm danh đầy đủ*/
+input.studentattendaced {
+    border: 1px solid #66afe9 !important;
+}
+
+/*Đanh gia NL PC v1*/
+#tbodyPupilAssessv1 tr:not(.removed-data) > th, #tbodyPupilAssessv1 tr:not(.removed-data) > td {
+    cursor: default !important;
+}
+
+#txaStudyRemarkContentFI, #txaAbilityRemarkContentFI, #txaPersonalQualityRemarkContentFI {
+    resize: none;
+}
+
+#tbodymodalabilityFI table tbody tr:last-child > td, #tbodymodalpersonalqualityFI table tbody tr:last-child > td {
+    border-bottom: 0px;
+}
+/*CSS phân trang danh sách quản lý lớp học*/
+#PaginationManageSchoolClass > li {
+    cursor: pointer;
+}
+
+#PaginationPupilEnglishConnect > li {
+    cursor: pointer;
+}
+
+#PaginationReportOccupationPupil > li {
+    cursor: pointer;
+}
+
+#PaginationPupilAccountInfo > li {
+    cursor: pointer;
+}
+
+#PaginationReportSuggestPriority > li {
+    cursor: pointer;
+}
+
+#PaginationReportRegisterGraduatedSecondarySchool > li {
+    cursor: pointer;
+}
+
+#PaginationPassClassReq > li {
+    cursor: pointer;
+}
+
+td.isdefault, input.isdefault {
+    border: 1px solid #66afe9 !important;
+}
+
+textarea#txaCommentWrite {
+    resize: vertical;
+    max-height: 150px;
+    padding-right: 10%;
+}
+
+.viewinfo {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-info {
+    min-height: 24px;
+}
+
+/* tables */
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(/Assets/admin/imgs/asc.gif) !important;
+}
+
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(/Assets/admin/imgs/desc.gif) !important;
+}
+
+table.tablesorter thead tr .header {
+    background-image: url(/Assets/admin/imgs/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+    padding-right: 16px;
+}
+
+.tablesorter thead .sorter-false {
+    background-image: none;
+    cursor: default;
+    padding: 4px;
+}
+/*#tbFile >tbody> tr >td,#tbFile >thead> tr >th{
+    border: 1px solid #b9b2b2 !important;
+}*/
+
+#tbFile > thead > tr > th {
+    border: 1px solid #ccc;
+    background: #eee;
+    padding: 9px 8px;
+}
+
+#tbFile > tbody > tr > td {
+    border: 1px solid #ccc;
+    padding: 6px 8px;
+    line-height: 20px;
+}
+
+    #tbFile > tbody > tr > td > input[type="text"] {
+        width: 100%;
+        border: none;
+        border-bottom: 1px dashed #aaa;
+    }
+
+#footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+}
+/*Báo cáo tổng hợp học sinh xét tốt nghiệp THCS*/
+#tbGRCRequestSumary > thead > tr > td {
+    text-transform: none;
+    font-weight: bold;
+}
+
+.score-board .table#file {
+    border-collapse: separate;
+    margin-top: -2px;
+    border: 1px solid #e6e6e6 !important;
+}
+
+.viewinfo-dev {
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 4px;
+}
+
+.linethrough-dev-pupilmark > th {
+    text-decoration: line-through;
+}
+
+.linethrough-dev-pupilmark > td {
+    text-decoration: line-through;
+}
+
+/*.linethrough-dev-pupilmark > th:first-child {
+    text-decoration: blink;
+}*/
+
+.linethrough-dev-pupilmark-row2 > td {
+    text-decoration: line-through;
+}
+
+
+.score-board .td-area1 textarea, .score-board .td-area1 .textarea, .score-board .td-area1span textarea {
+    padding: 0px 5px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    outline: none;
+    border-radius: 0;
+    border: 1px solid transparent;
+    line-height: 25px;
+    min-width: 100%;
+    resize: none;
+    text-align: left;
+}
+
+.score-board .td-area1.autoheight {
+    z-index: 99;
+    overflow: visible;
+    width: auto; /*position:inherit;*/
+}
+
+    .score-board .td-area1.autoheight > textarea, .score-board .td-area1span.autoheight > textarea {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+        min-height: 80px;
+        line-height: 18px;
+        resize: vertical;
+        background-color: #fff;
+        padding: 2px 5px;
+    }
+
+    .score-board .td-input input:focus, .score-board .td-input select:focus, .score-board .td-area1.autoheight textarea {
+        border: 1px solid #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+
+
+.customMulti {
+    line-height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.ui-icon.ui-icon-triangle-1-s{
+    height:28px
+}
